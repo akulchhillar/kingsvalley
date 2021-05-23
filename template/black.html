@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>You Play With Black Pieces</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <style type='text/css'>
+
+
+    	#game{transform: rotate(180deg);}
+    	.boardCol_0{transform: rotate(180deg)}
+      .boardCol_1{transform: rotate(180deg)}
+      .boardCol_2{transform: rotate(180deg)}
+      .boardCol_3{transform: rotate(180deg)}
+      .boardCol_4{transform: rotate(180deg)}
+
+
+
+/*Only for black pieces*/
+    	
+    </style>  
+</head>
+
+<body bgcolor="#efefef">
+
+  <div class="container">
+  
+  <table id='game'></table>
+
+  <div class="container-2">
+
+  <div id="instruction">
+
+  <div id="results">
+
+  <h1>Results</h1>
+  </div>
+
+  <h1>Instructions</h1>
+   <h5>Because we are not storing any data please do NOT refresh the page or you would reset the game. </h5>
+  <h6>
+  The objective of the game is to move his/her king piece to the central "King's Valley" tile.
+  <br><br>The game starts with the player with white pieces moving first followed by the black player and so on.
+  <br><br>The players take turns to move one of their pieces.All pieces move in the same way: horizontally, vertically, or diagonally.There are no captures and pieces can't jump other pieces.
+  <br><br>Pieces continue their movement until, and only until, they reach a vacant square adjacent to (or alongside) either the edge of the board or another piece, at which point the movement ends.
+Stopping in the middle of a “slide,” as is done in chess, is not allowed.
+<br><br>The only piece the players may stop at the center square is the King. But again, the player may not do so by stopping the King's movement “mid-slide.”
+<br><br>The player going first must, for the first move of the game, move a Soldier.
+<br><br>Passing a turn is illegal. No one can pass the turn and must move anyone of the pieces.
+<br><br>If King is fixed on the square he can't move at next turn the game is lost.
+<br><br> Post clicking a piece, the green circles show the available moves for a piece and the orange squares show the latest movement by a piece.
+</h6>
+
+
+</div>
+
+</div>
+
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+  <script src="{{ url_for('static', filename='jsboard.min.js') }}" type='text/javascript'></script>
+  <script src="{{ url_for('static', filename='black.js') }}" type='text/javascript'></script>
+</body>
+</html>
