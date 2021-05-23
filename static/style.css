@@ -1,0 +1,63 @@
+.orange {background: orange !important; }
+.green {background-image: url("https://i.ibb.co/dBV0ys4/pointer.png") !important;
+	    background-repeat: no-repeat !important;}
+.notclickable{pointer-events: none;}
+
+.container{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	
+	
+}
+
+.container-2{
+	display: grid;
+	grid-template-rows: 25% 75%;
+
+
+}
+
+#game{
+	height: 90vh;
+	width: 90vh;
+}
+
+#instruction{
+	color: #121212;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#results{
+	display:none;
+	text-decoration: bold;
+}
+
+@media all and (max-width:899px) and (min-width:300px) { /*for phones*/
+
+.container{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	
+}
+
+}
+
+
+
+
+
+@media all and (min-width:1024px) { /*for other devices*/
+
+.container{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1em;
+	/*grid-template-rows: auto auto;*/
+	
+}
+
+}
+
